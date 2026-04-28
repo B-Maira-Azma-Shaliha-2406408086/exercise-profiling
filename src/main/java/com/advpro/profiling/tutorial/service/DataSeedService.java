@@ -29,7 +29,7 @@ public class DataSeedService {
     @Autowired
     private StudentCourseRepository studentCourseRepository;
 
-    private static final int NUMBER_OF_STUDENTS = 500;
+    private static final int NUMBER_OF_STUDENTS = 200;
     private static final int NUMBER_OF_COURSE = 10;
 
     public void seedStudent() {
