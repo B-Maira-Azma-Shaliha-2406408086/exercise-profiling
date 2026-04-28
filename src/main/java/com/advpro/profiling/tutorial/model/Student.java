@@ -2,6 +2,8 @@ package com.advpro.profiling.tutorial.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 /**
  * @author muhammad.khadafi
  */
@@ -90,5 +92,12 @@ public class Student {
                 ", faculty='" + faculty + '\'' +
                 ", gpa=" + gpa +
                 '}';
+    }
+
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+    private List<StudentCourse> studentCourses;
+
+    public List<StudentCourse> getStudentCourses() {
+        return studentCourses;
     }
 }
